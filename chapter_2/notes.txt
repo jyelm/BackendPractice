@@ -1,0 +1,13 @@
+npm run dev accesss the scripts line in package.json, which runs the node server.js file
+you cannot have comments in a json filecallback functions are used within the app.listen function since a server is ansynchornus and takes time to boot up
+npm stands for node package manager, where dependencies are stored and installed on, usually to the package.json file
+in order to import a value in a string literal you have to use backticks, instead of just curly brackets in pythin
+backticks are used to create template literals, which allow for string interpolation
+somehow the require function is used to import the express module
+the app variable invokes an instance of express
+nodemon allows the updates made in the codebase to be automatically detected and the server automatically restarted
+dev dependencies are dependencies that are only used during development, qusality of life
+the destinations on urls (usually followed by forward slashes) are called endpoints
+these app.get functions are the endpoints to server requests
+for the test.rest file their must be a space between the contenttype indicator and the json object due to formatting issues
+middle ware is the protective layer between the request and the interpretation of that request
