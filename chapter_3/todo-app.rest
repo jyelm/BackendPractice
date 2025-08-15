@@ -1,0 +1,47 @@
+### GET / 
+GET http://localhost:5003
+
+### Register a user POST /auth/register
+POST  http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+    "username": "jcelm",
+    "password": "password"
+}
+
+### Login a user POST /auth/login
+POST  http://localhost:5003/auth/login
+Content-Type: application/json
+
+{
+    "username": "jcelm",
+    "password": "password"
+}
+
+### Fetch all todos GET/TODOS (protected)
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU1MjIyMTUzLCJleHAiOjE3NTUzMDg1NTN9.baTU2JUsMVvSHmBOebWfqbl3hOYZuA-1sdNUOtR0joI
+
+### Create a todo POST /todos (protected)
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU1MjIyMTUzLCJleHAiOjE3NTUzMDg1NTN9.baTU2JUsMVvSHmBOebWfqbl3hOYZuA-1sdNUOtR0joI
+Content-Type: application/json
+
+{
+    "task": "Buy groceries"
+}
+
+### Update a todo PUT /todos/:id (protected)
+PUT http://localhost:5003/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU1MjIyMTUzLCJleHAiOjE3NTUzMDg1NTN9.baTU2JUsMVvSHmBOebWfqbl3hOYZuA-1sdNUOtR0joI
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete a todo DELETE /todos/:id (protected)
+DELETE http://localhost:5003/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU1MjIwOTI4LCJleHAiOjE3NTUzMDczMjh9.YFL5kEyFGd8AWfhbyQuRCvBfRaUkd0uvlqqmKOJjJoQ
+

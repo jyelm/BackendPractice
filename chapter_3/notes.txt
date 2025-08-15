@@ -1,0 +1,20 @@
+src folder is going to be the source of truth for our application, the buildiing of our application
+Middleware is uthenticating
+routes are handeling our api endpoints
+node modules act as a virtual environment
+type: module allows us to use the import syntax throughout the project\
+__filename and__dirname are essential how the GET request can return a specific file in our directory, in this case the index.html file
+app.use(express.staic...) essesntially allows the app to serve static files from the public folder, which is a level higher than server.js
+Router allows you to group similar endpoints in express
+routes map an http methods and URL to a specific handler function
+CRUD methods are all http methods
+when /auth is present in the url, all of the routes in authRoutes.js are prefixed with /auth and referenced
+everytime the server is reset the databse is also reset
+.run is for aql operations that dont return rows like insert, .get is for a single row and .all if for an array of rows
+one observation their is a lot of back and forth from the front end and the backend especially with this index.html file
+jwt.sign assigns the user_id to the token that the user is given.  jwt.verify ensures that the token is the same value and modifies a variable to ensure that the user_id is returned to the endpoints
+i am still confused about how JWT as a whole works and why it requires a secret from the .env file
+jwt refers to the secret key to verify and create the tokens
+under the hood req res and next are nodes http server wrapped in express logic
+tokens are valid for one login session for which the server has persissted
+Every time the server restarts the database is reset, this is different with postgres

@@ -22,6 +22,7 @@ app.use(express.json())
 // a browser
 app.get('/', (req, res) => {
     //this is endpoint numver 1 - /
+    console.log("user requested the home page website")
     res.send(`
         <body
         style="background-color: pink; color: blue;">
@@ -29,6 +30,9 @@ app.get('/', (req, res) => {
             <p>${JSON.stringify(data)}</p> 
             <a href="/dashboard">Dashboard</a>
         </body>
+        <script>
+            console.log("the is my script")
+        </script>
         `)
 })
 
@@ -45,7 +49,7 @@ app.get('/dashboard', (req, res) => {
 //type 2-API endpoints - non visual data
 app.get('/api/data', (req, res) => {
     console.log('this onw was for data')
-    res.send(data)
+    res.status(599).send(data)
 })
 
 //CRUD-method; create read update and delete, where read i like get, create is like post,
@@ -55,7 +59,7 @@ app.post('/api/data', (req, res) => {
     //someone wants to crea a user for example when they click a sign up button
     // the user clicks the sign up button after enterinf their crentials, and their 
     //browser is wired up to send out a network request to the serber to handle that action
-    const newEntry = req.body
+    const newEntry = req.body //this references gilgamesh in the test.rest file
     console.log(newEntry)
     data.push(newEntry.name) // essetially appends the post request data onto the data array
     res.sendStatus(201)

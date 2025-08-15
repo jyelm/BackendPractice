@@ -1,0 +1,17 @@
+prisma schema creates a complex object which will allow us to interact with us, will allow for cleaner code
+ORM is a layer of abstraction between the database and the application which allows for cleaner code
+Postgres is able to act as a seperate environment as opposed to SQLite which will allow it to persist after the server is reset
+ORMS are crucial for migrations, or going from one version of the database to another, since they store every record  of modifications with the database, every instance is updated to reflect these changes
+endpoints need to be asynchronous since communication between the server and databse is asynchronous
+Still confused on the reason why text and user id are wrapped in data for the prsima create function and similar functions
+still confused on what would happen with the id's of the todo tasks in the prescence of multiple users; probably something to do with the frontend
+Docker from what i understand is a snapshot of your code or a templat the is easily transferable to other machines and environemtns
+Docker allows the environemtns (variables like hardware and software where the code is actually running) to be difined in code, allowing reproducibility
+docker images are built from the top down, if updates are made layersing things that wont likely be changes (like packae*.json) on top of copying the whole file will prevent one from having to redownload everything
+config needs to be written for prisma since it is sepcific to the schema, i gues its just further instruction?
+a .yaml is an instruction sheet for one to boot up all of their docker environments with ease
+periods usually indicate current directory
+node v=envs usually just give a little more leeway to devleopment
+ports matched for docker and internal
+cvolumes makesure data doesnt reset on reset unless container is rebuilt from scratch
+postgres and app are in seperate containers linked in the yaml file, by ports, by name, and by environment variables
