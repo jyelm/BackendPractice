@@ -15,3 +15,4 @@ node v=envs usually just give a little more leeway to devleopment
 ports matched for docker and internal
 cvolumes makesure data doesnt reset on reset unless container is rebuilt from scratch
 postgres and app are in seperate containers linked in the yaml file, by ports, by name, and by environment variables
+todos is an array in the User module since a user can have multiple todo items

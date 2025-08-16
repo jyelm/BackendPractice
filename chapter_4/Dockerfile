@@ -10,6 +10,11 @@ COPY package*.json .
 # Install dependencies; will install all dependecies in the docker environment
 RUN npm install
 
+# Generate Prisma client
+RUN npm install
+RUN npx prisma generate
+
+
 # Copy the rest of the application code to the container; current file to destination
 COPY . .
 
